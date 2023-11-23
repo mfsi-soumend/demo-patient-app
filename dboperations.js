@@ -12,7 +12,7 @@ async function addPatientData(Patient) {
       }
 
       const sqlQuery =
-        "INSERT INTO patient (given_name, middle_name, family_name, birthdate, birthdate_estimated, gender, preferred, address1, city_village, state_province, country, postal_code, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        "INSERT INTO patient (given_name, middle_name, family_name, birthdate, birthdate_estimated, gender, preferred, address1, city_village, state_province, country, postal_code, phone, is_processed) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
       connection.query(
         sqlQuery,
@@ -30,6 +30,7 @@ async function addPatientData(Patient) {
           Patient.country,
           Patient.postalCode,
           Patient.phone,
+          false,
         ],
         (error, results, fields) => {
           connection.release();

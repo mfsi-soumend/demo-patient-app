@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `patient`;
 CREATE TABLE `patient` (
   `patientId` int NOT NULL AUTO_INCREMENT,
   `preferred` tinyint DEFAULT NULL,
+  `is_processed` tinyint DEFAULT NULL,
   `given_name` varchar(45) DEFAULT NULL,
   `middle_name` varchar(45) DEFAULT NULL,
   `family_name` varchar(45) DEFAULT NULL,
