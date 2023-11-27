@@ -43,6 +43,7 @@ CREATE TABLE `patient` (
   `identifier` varchar(45) DEFAULT NULL,
   `identifierType` varchar(45) DEFAULT NULL,
   `location` varchar(45) DEFAULT NULL,
+  `hospital` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`patientId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
